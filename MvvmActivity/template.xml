@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<template    
+    format="5"
+    name="MVVM Activity"
+    description="Creates a new MVVM activity, with viewModel, xml layout, add to manifest">
+
+    <category value="Tech Talk" />
+
+    <parameter
+        id="screenName"
+        name="Name of the screen"
+        type="string"
+        constraints="class|nonempty"
+        default="Home"
+        help="The name of the screen to create, e.g. 'Home'." />
+
+    <parameter
+        id="addParameter"
+        name="Sample entry parameter"
+        type="boolean"
+        default="true"
+        help="If true, entry parameter will be added" />
+
+    <parameter
+        id="addRecyclerView"
+        name="Add RecyclerView"
+        type="boolean"
+        default="false"
+        help="Add RecyclerView with Adapter and ViewHolder" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
